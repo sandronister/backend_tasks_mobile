@@ -3,6 +3,7 @@ const app = require('express')(),
     consign = require('consign')
     
 consign()
+    .include('./config/passport.js')
     .then('./config/middleware.js')
     .then('./api')
     .then('./config/routes.js')
